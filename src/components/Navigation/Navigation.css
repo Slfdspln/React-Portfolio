@@ -1,0 +1,15 @@
+.nav {
+    display: flex;
+    list-style: none;
+    width: 40vw;
+    justify-content: space-between;
+}
+
+#nav-link:visited {
+    text-decoration: none;
+    color: #EBDFCC;
+}
+
+#nav-link.active {
+    color: #DB791A;
+}
