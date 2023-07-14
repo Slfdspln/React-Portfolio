@@ -60,7 +60,7 @@ This application is powered by React.js (v18.2.0). Material UI (v5.13.6) and CSS
 
 ## Installation
 
-- To make changes to the code base, clone the repo ( - ), run npm i within the root directory, then run npm start -> you will then be taken to a live server running the site where if edits are made to the code base they can be seen in real time.
+- To make changes to the code base, clone the repo ( git@github.com:Slfdspln/React-Portfolio.git ), run npm i within the root directory, then run npm start -> you will then be taken to a live server running the site where if edits are made to the code base they can be seen in real time.
 
 - Users can also feel free to access the live application directly by visiting the Heroku link ( - ).
 
