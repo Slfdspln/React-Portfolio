@@ -1,7 +1,6 @@
 //Imports
 import React from "react";
 import "./About.css";
-import hero from "../../../images/HeroImage.png";
 import CardMedia from "@mui/material/CardMedia";
 
 // Function that renders the about page & exports
@@ -18,7 +17,7 @@ export default function About() {
             margin: "0 auto",
             paddingTop: "20px",
           }}
-          image={hero}
+          // image={hero}
           alt="About Me"
         />
       </div>

@@ -3,7 +3,7 @@
 div#project {
   display: flex;
   height: 23vh;
-  background-image: url(../../../images/DudeWheresMyShow.png);
+  /* background-image: url( - ); */
   background-size: contain;
   background-repeat: no-repeat;
 }
