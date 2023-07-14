@@ -1,16 +1,18 @@
+// Imports
 import React, { useState } from "react";
 import { TextField, dividerClasses } from "@mui/material";
 import { Button, MenuItem } from "@mui/material";
 import Stack from "@mui/material/Stack";
-import { TextareaAutosize } from "@mui/material";
 import "./Contact.css";
 
+// Exports
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Validates name
   const validateName = (e) => {
     console.log(e);
     const { name, value } = e.target;
@@ -26,6 +28,7 @@ export default function Contact() {
     }
   };
 
+  // Validates email
   const validateEmail = (e) => {
     e.preventDefault();
     console.log(e);
@@ -34,17 +37,21 @@ export default function Contact() {
     if (name === "email") {
       if (value === "") {
         setEmail("");
-        setErrorMessage(`Please enter a valid email address. This field is required.`);
+        setErrorMessage(
+          `Please enter a valid email address. This field is required.`
+        );
       }
-      // if (!value.includes("@")) {
-      //   setErrorMessage(`Please enter a valid email`);
-      // }
-    }
-    if (value.length > 0) {
-      setErrorMessage(``);
+      const pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+      console.log(!pattern.test(value));
+      if (!pattern.test(value)) {
+        setErrorMessage(`Please enter a valid email`);
+      } else {
+        setErrorMessage("");
+      }
     }
   };
 
+  // Validates message
   const validateMessage = (e) => {
     console.log(e);
     const { name, value } = e.target;
@@ -60,6 +67,7 @@ export default function Contact() {
     }
   };
 
+  // Renders contact form
   return (
     <>
       <div>
@@ -71,8 +79,8 @@ export default function Contact() {
         <Stack spacing={2}>
           <MenuItem>
             <TextField
-              value={name}
-              onChange={validateName}
+              defaultValue={name}
+              onBlur={validateName}
               id="outlined-basic"
               fullWidth
               label="Name"
@@ -85,8 +93,8 @@ export default function Contact() {
           <MenuItem>
             {" "}
             <TextField
-              value={email}
-              onChange={validateEmail}
+              defaultValue={email}
+              onBlur={validateEmail}
               id="outlined-basic"
               fullWidth
               label="Email Address"
@@ -98,8 +106,8 @@ export default function Contact() {
           </MenuItem>
           <MenuItem>
             <textarea
-              value={message}
-              onChange={validateMessage}
+              defaultValue={message}
+              onBlur={validateMessage}
               rows="15"
               cols="40"
               id="outlined-basic"
@@ -110,7 +118,6 @@ export default function Contact() {
               style={{ backgroundColor: "floralwhite" }}
               placeholder="Type your message here!"
             />
-            {/* <TextareaAutosize /> */}
           </MenuItem>
           {errorMessage && (
             <div style={{ display: "flex", justifyContent: "center" }}>
@@ -133,53 +140,7 @@ export default function Contact() {
   );
 }
 
-// function checkForm(form) {
-//   // validation fails if the input is blank
-//   if (form.inputfield.value == "") {
-//     alert("Error: Input is empty!");
-//     form.inputfield.focus();
-//     return false;
-//   }
-
-//   // regular expression to match only alphanumeric characters and spaces
-//   var re = /^[\w ]+$/;
-
-//   // validation fails if the input doesn't match our regular expression
-//   if (!re.test(form.inputfield.value)) {
-//     alert("Error: Input contains invalid characters!");
-//     form.inputfield.focus();
-//     return false;
-//   }
-
-//   // validation was successful
-//   return true;
-// }
-
-// <div>
-//   <h1>Contact</h1>
-//   <form>
-//     <Stack spacing={2}>
-//       <MenuItem>
-//         <TextField id="outlined-basic" label="Name" variant="outlined" />
-//       </MenuItem>
-//       <MenuItem>
-//         {" "}
-//         <TextField
-//           id="outlined-basic"
-//           label="Email Address"
-//           variant="outlined"
-//         />
-//       </MenuItem>
-//       <MenuItem>
-//         <TextField id="outlined-basic" label="Message" variant="outlined" />
-//         {/* <TextareaAutosize /> */}
-//       </MenuItem>
-//       <MenuItem>
-//         <Button xs={{width: "100%"}} variant="contained">Submit</Button>
-//       </MenuItem>
-//     </Stack>
-//   </form>
-// </div>
+// Below is a possible functional Google Form that can be implemented to receive contact info and messages without a backend set-up
 
 // <div style={{ display: "flex", justifyContent: "center" }}>
 //   <iframe
