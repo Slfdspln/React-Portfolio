@@ -40,7 +40,7 @@ Challenges faced when building this application resulted mainly from mixing CSS 
 
 ## Live URL
 
-[Link to Ryan Messett's Portfolio]( - )
+[]( - )
 
 ## Screenshots
 
