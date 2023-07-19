@@ -35,7 +35,7 @@ const Footer = () => {
             className="pop-on-hover"
             sx={{ fontSize: 50 }}
             onClick={(event) =>
-              (window.location.href = "https://github.com/rmessett15")
+              (window.location.href = "https://github.com/Slfdspln")
             }
           />
           <TwitterIcon
@@ -43,7 +43,7 @@ const Footer = () => {
             className="pop-on-hover"
             sx={{ fontSize: 50 }}
             onClick={(event) =>
-              (window.location.href = "https://twitter.com/rmessett15")
+              (window.location.href = " ")
             }
           />
           <EmailIcon
@@ -51,7 +51,7 @@ const Footer = () => {
             className="pop-on-hover"
             sx={{ fontSize: 50 }}
             onClick={(event) =>
-              (window.location.href = "mailto:rmessett15@gmail.com")
+              (window.location.href = "mailto:inaliaashanti@gmail.com")
             }
           />
         </Grid>
