@@ -27,7 +27,7 @@ const Footer = () => {
             sx={{ fontSize: 50 }}
             onClick={(event) =>
               (window.location.href =
-                "https://www.linkedin.com/in/ryan-messett/")
+                "https://www.linkedin.com/in/cristal-rivera-662b58248/")
             }
           />
           <GitHubIcon
