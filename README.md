@@ -44,6 +44,7 @@ Challenges faced when building this application resulted mainly from mixing CSS 
 
 ## Screenshots
 
+![image](https://github.com/Slfdspln/React-Portfolio/assets/121422214/84a37754-6861-4143-a349-4d87f0414d02)
 
 
 
